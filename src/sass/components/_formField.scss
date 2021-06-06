@@ -1,0 +1,90 @@
+.main-slide__form {
+  .remove-field {
+    position: absolute;
+    top: -1rem;
+    left: 0rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100000000000000000000rem; //🙄🙄🙄
+    border: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(243, 54, 54);
+      color: white;
+    }
+  }
+
+  &--input {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1.6rem;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba($color: #fff, $alpha: 0.2);
+    border-left: 3px solid transparent;
+    @include defaultTransition;
+
+    @media only screen and (max-width: 37em) {
+      padding: 1vh;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: orange;
+    }
+
+    option {
+      background-color: #000;
+      background-color: rgb(53, 52, 52);
+      text-align: center;
+
+      @media only screen and (max-width: 41em) {
+        font-size: 1.1rem;
+      }
+    }
+
+    &-code {
+    }
+
+    &-unit {
+    }
+    &-grade {
+      border-left: 3px solid transparent;
+      border-color: green;
+
+      &.a {
+        border-color: green;
+      }
+
+      &.b {
+        border-color: yellowgreen;
+      }
+
+      &.c {
+        border-color: yellow;
+      }
+
+      &.d {
+        border-color: orange;
+      }
+
+      &.e {
+        border-color: rgb(250, 86, 57);
+      }
+
+      &.f {
+        border-color: rgb(253, 0, 0);
+      }
+    }
+  }
+}

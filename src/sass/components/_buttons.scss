@@ -1,0 +1,91 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 0%;
+  color: white;
+  font-size: 1.3rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  padding: 1rem;
+  @include defaultTransition;
+  cursor: pointer;
+
+  @media only screen and (max-width: 37em) {
+    padding: 1rem;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &.add-field {
+    padding: 1rem 5rem;
+    color: #eee;
+    border: 2px dotted #eee;
+    border-radius: 2rem;
+
+    @media only screen and (max-width: 37em) {
+      padding: 0.5rem 2rem;
+    }
+
+    &:active {
+      border-radius: 0;
+    }
+  }
+
+  &.calculate-cgpa {
+    border: 2px solid white;
+
+    &:active {
+      border-radius: 3rem;
+    }
+
+    &.disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////
+.result-cgpa__go-back-btn {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  border-radius: 1000000000000000000000000rem; //😎
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 1rem;
+  @include defaultTransition;
+
+  span {
+    transition: all 0.1s;
+    display: block;
+  }
+
+  &:hover {
+    span {
+      transform: translateX(-200%);
+      opacity: 0;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////
+.reset-btn {
+  color: rgb(162, 162, 162);
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  text-decoration: underline;
+
+  &:hover {
+    color: white;
+  }
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

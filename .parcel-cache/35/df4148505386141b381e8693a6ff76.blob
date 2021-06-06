@@ -1,0 +1,65 @@
+:root {
+  --color-primary: ;
+  --color-primary--light: ;
+  --color-secondary: ;
+  --color-secondary--light: ;
+  --color-white: white;
+  --color-black: black;
+  --color-grey: grey;
+  --color-grey--dark: #535252;
+  --shadow-white: 0 0.34rem 1rem 0.5rem rgba(255, 255, 255, 0.8);
+  --shadow-dark: 0 0.34rem 1rem 0.5rem rgba(0, 0, 0, 0.4); }
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: "sans-serif", sans-serif;
+  font-weight: 400; }
+
+h1 {
+  color: red;
+  font-size: 5rem;
+  background-color: black; }
+
+.body-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #5f9ea0;
+  position: relative; }
+  .body-container::-webkit-scrollbar {
+    display: none; }
+
+.slide {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.slide {
+  font-size: 3rem;
+  opacity: 0; }
+  .slide--1 {
+    background-color: orange;
+    background-color: #41d3bd;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f0f8e4' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23dcedd1' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23f9fced' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23c8e2be' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23e6fedb' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23dbf8cf' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23dbf9cf' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23cceec1' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23dbf6cf' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23c1e6b7' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23f8fbeb' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23d4fdc9' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover; }
+  .slide--2 {
+    background-color: skyblue; }
+  .slide--3 {
+    background-color: blueviolet; }
+  .slide--active {
+    opacity: 1; }
+
+/*# sourceMappingURL=style.6313dc96.css.map */

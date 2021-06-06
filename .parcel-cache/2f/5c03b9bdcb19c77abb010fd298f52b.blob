@@ -1,0 +1,21 @@
+"use strict";
+
+const slides = document.querySelectorAll(".slide");
+let counter = 1;
+
+const slideChanger = function () {
+  slides.forEach(e => e.classList.remove(".slide--active"));
+  slides[counter - 1].classList.add(".slide--active");
+
+  if (counter < 3) {
+    counter++;
+  } else counter = 1;
+};
+
+document.body.addEventListener("keydown", function (e) {
+  console.log(e);
+
+  if (e.code === arrowRight) {
+    slideChanger();
+  }
+});

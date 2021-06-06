@@ -1,0 +1,62 @@
+.main-slide__form {
+  display: grid;
+  grid-gap: 1rem;
+  @include defaultTransition;
+
+  @media only screen and (max-width: 37em) {
+    grid-gap: 2rem;
+  }
+
+  &.invalid {
+    opacity: 0.2;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &--headings {
+    @media only screen and (max-width: 37em) {
+      padding-bottom: 1rem;
+    }
+
+    h3 {
+      color: #aaa;
+      text-align: center;
+      font-size: 1.3rem;
+      @include defaultTransition;
+    }
+  }
+
+  &--field,
+  &--headings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+
+    @media only screen and (max-width: 37em) {
+      grid-gap: 1.5rem;
+    }
+  }
+
+  .blank-form {
+    text-align: center;
+    height: 50vh;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #bbb;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    &.visible {
+      display: flex;
+    }
+  }
+
+  &--field {
+    animation: slideDown 0.5s ease;
+    position: relative;
+    padding: 0 1rem;
+  }
+}

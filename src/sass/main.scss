@@ -1,0 +1,22 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/buttons";
+@import "components/form";
+@import "components/formField";
+@import "components/footer";
+
+@import "layout/layout";
+
+@import "pages/home";
+
+// Importing last cos I want the light theme to overwrite previous
+// styles when activated
+
+@import "components/light-theme";

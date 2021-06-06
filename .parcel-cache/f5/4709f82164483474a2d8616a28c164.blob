@@ -1,0 +1,6 @@
+"use strict";
+
+const slides = document.querySelectorAll(".slide");
+let counter;
+
+const slideChanger = function () {};

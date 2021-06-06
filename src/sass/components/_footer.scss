@@ -1,0 +1,23 @@
+.main-slide__footer-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -3.5rem;
+
+  &--author {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: rgb(162, 162, 162);
+
+    a {
+      text-decoration: none;
+      transition: all 0.3s;
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}

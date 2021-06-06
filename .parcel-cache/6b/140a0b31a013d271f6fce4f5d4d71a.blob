@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.6313dc96.css">
+    <link rel="shortcut icon" href="/favicon.3bdfcf3b.jpeg" type="image/x-icon">
+    <script defer="" src="/script.fa98feaf.js"></script>
+    <title>Fresh Project</title>
+  </head>
+  <body class="body-container">
+    <div class="slide slide--1 slide--active">
+      <div class="hero__container">
+        <div class="hero__text-box">
+          <h1>Calculate your CGPA on the fly</h1>
+          <p>Your data isn't stored, there's no live connection during</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--2">Slide 2</div>
+    <div class="slide slide--3">Slide 3</div>
+  </body>
+</html>

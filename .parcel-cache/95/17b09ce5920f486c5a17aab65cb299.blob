@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.6313dc96.css">
+    <link rel="shortcut icon" href="/favicon.3bdfcf3b.jpeg" type="image/x-icon">
+    <script defer="" src="/controller.696c23e6.js"></script>
+    <title>Fresh Project</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="main-slide slide active">
+        <div class="slide__header">
+          <h1>Cgpa calculator</h1>
+        </div>
+
+        
+      </div>
+    </div>
+  </body>
+</html>

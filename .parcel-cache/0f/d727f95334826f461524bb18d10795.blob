@@ -1,0 +1,9 @@
+"use strict";
+
+const slides = document.querySelectorAll(".slide");
+let counter = 1;
+
+const slideChanger = function () {
+  slides.forEach(e => e.classList.remove(".slide--active"));
+  slides;
+};

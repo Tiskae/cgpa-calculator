@@ -1,0 +1,298 @@
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-video {
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+
+    @media only screen and (max-width: 41em) {
+      display: none;
+    }
+  }
+
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  visibility: hidden;
+
+  &.play {
+    visibility: visible;
+  }
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+}
+
+.main-slide {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: min-content 1fr min-content min-content;
+  grid-gap: 3.5rem;
+  padding: 2rem;
+  padding-bottom: 0rem;
+  background-color: transparent;
+  position: relative;
+
+  @media only screen and (max-width: 37em) {
+    padding: 4rem 2rem;
+  }
+
+  .error-box {
+    position: absolute;
+    border-left: 4px solid rgb(255, 44, 44);
+    background-color: $color-primary;
+    color: white;
+    right: -2rem;
+    box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.3);
+    top: 4rem;
+    z-index: 100000000000000000000;
+    animation: fadeIn 1s;
+    animation-fill-mode: backwards;
+    transition: all 0.5s;
+
+    @media only screen and (max-width: 41em) {
+      right: 1rem;
+    }
+
+    &.hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .error-message {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0.7rem 2rem;
+    }
+
+    .remove-error-message {
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 100000000000000000000rem; //🙄🙄🙄
+      border: none;
+      transition: all 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+
+  .switch-theme {
+    position: absolute;
+    top: 90%;
+    right: 2rem;
+
+    @media only screen and (max-width: 37em) {
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+
+    img {
+      height: 3rem;
+      width: 3rem;
+      cursor: pointer;
+      @include defaultTransition;
+      backface-visibility: hidden;
+
+      &.hidden {
+        display: none;
+      }
+
+      &.icon {
+        &--light-theme {
+          &:hover {
+            transform: rotateZ(180deg);
+          }
+        }
+
+        &--dark-theme {
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+
+    @media only screen and (max-width: 37em) {
+      display: grid;
+      grid-template-columns: 1fr min-content;
+      grid-gap: 2rem;
+    }
+    h1 {
+      font-family: "Odibee Sans", sans-serif;
+      font-size: 3rem;
+      letter-spacing: 3px;
+      color: white;
+      text-transform: uppercase;
+      text-align: center;
+      display: grid;
+      align-items: center;
+      grid-gap: 1.5rem;
+      grid-template-columns: 1fr max-content 1fr;
+      @include defaultTransition;
+
+      @media only screen and (max-width: 37em) {
+        grid-template-columns: max-content;
+        justify-items: start;
+        margin-left: 1rem;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        @include defaultTransition;
+
+        @media only screen and (max-width: 37em) {
+          display: none;
+        }
+      }
+
+      &::before {
+        clip-path: polygon(0% 50%, 100% 0, 100% 100%);
+      }
+
+      &::after {
+        clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+      }
+    }
+  }
+
+  &__main {
+    overflow-y: scroll;
+
+    &.hidden {
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0.3rem;
+      background-color: #ffffff33;
+      margin: 1rem;
+      @include defaultTransition;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 0.3rem;
+      background-color: rgba(255, 255, 255, 0.7);
+      @include defaultTransition;
+    }
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+
+    @media only screen and (max-width: 37em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.result-page {
+  display: grid;
+  grid-gap: 20vh;
+  grid-template-rows: max-content max-content max-content;
+  // height: 80vh;
+  padding: 0 3rem;
+  align-content: center;
+
+  @media only screen and (max-width: 37em) {
+    padding: 0;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.result__info {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 0.3rem;
+
+  &--container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    font-size: 1rem;
+    color: white;
+
+    @media only screen and (max-width: 51em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--heading {
+    color: #bbb;
+    @include defaultTransition;
+  }
+
+  &--text {
+    font-size: 1.7rem;
+    font-weight: bold;
+    @include defaultTransition;
+
+    @media only screen and (max-width: 37em) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.result-cgpa {
+  color: rgb(230, 227, 227);
+
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  @include defaultTransition;
+
+  @media only screen and (max-width: 37em) {
+    font-size: 1.9rem;
+  }
+
+  &__value {
+    span {
+      color: lightgreen;
+    }
+  }
+
+  &__compliment {
+  }
+
+  &__footer {
+    display: grid;
+    justify-items: end;
+  }
+}

@@ -1,0 +1,5 @@
+"use strict";
+
+const slides = document.querySelectorAll(".slide");
+
+const slideChanger = function () {};

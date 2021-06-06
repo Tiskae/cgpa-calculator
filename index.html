@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="src/js/controller.js"></script>
+    <title>CGPA calulator</title>
+  </head>
+  <body class="light-them">
+    <div class="main-container">
+      <div class="bg-video__container">
+        <video controls width="250" autoplay loop muted class="bg-video">
+          <source src="Lightning Bolt At Night.mp4" type="video/mp4" />
+          <source src="Lightning Bolt At Night.mp4" type="video/webm" />
+          ""
+        </video>
+      </div>
+
+      <div class="main-slide slide active">
+        <div class="main-slide__header">
+          <h1>Cgpa calculator</h1>
+          <div class="switch-theme">
+            <!-- <svg class="icon--light-theme">
+              <use xlink:href="src/img/icons-sprite.svg#icon-sun"></use>
+            </svg>
+            <svg class="icon--dark-theme hidden">
+              <use xlink:href="src/img/icons-sprite.svg#icon-moon"></use>
+            </svg> -->
+            <img src="src/img/sun.svg" alt="sun" class="icon--light-theme" />
+            <img
+              src="src/img/moon.svg"
+              alt="moon"
+              class="icon--dark-theme hidden"
+            />
+          </div>
+        </div>
+
+        <div class="error-box hidden">
+          <p class="error-message">&nbsp;</p>
+          <button class="remove-error-message">x</button>
+        </div>
+
+        <div class="main-slide__main">
+          <form action="#" class="main-slide__form">
+            <div class="main-slide__form--headings">
+              <h3>Couse code</h3>
+              <h3>Unit</h3>
+              <h3>Grade</h3>
+            </div>
+
+            <div class="blank-form">
+              <p>Nothing to calculate here, add new fields to get started :)</p>
+            </div>
+
+            <div class="main-slide__form--field">
+              <button class="remove-field">x</button>
+              <input
+                type="text"
+                class="main-slide__form--input main-slide__form--input-code"
+              />
+              <select
+                class="main-slide__form--input main-slide__form--input-unit"
+                name="unit"
+                id="unit"
+              >
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+
+              <select
+                class="main-slide__form--input main-slide__form--input-grade"
+                name="grade"
+                id="grade"
+              >
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <div class="main-slide__footer">
+          <button class="btn add-field">+ Add new field</button>
+          <button class="btn calculate-cgpa">Calculate CGPA</button>
+        </div>
+
+        <div class="result-page hidden">
+          <div class="result__info--container">
+            <div class="result__info">
+              <h3 class="result__info--heading">Total Courses</h3>
+              <p class="result__info--text result__total-courses">&nbsp;</p>
+            </div>
+
+            <div class="result__info">
+              <h3 class="result__info--heading">Total units</h3>
+              <p class="result__info--text result__total-units">&nbsp;</p>
+            </div>
+            <div class="result__info">
+              <h3 class="result__info--heading">Total points</h3>
+              <p class="result__info--text result__total-points">&nbsp;</p>
+            </div>
+            <div class="result__info">
+              <h3 class="result__info--heading">Remark</h3>
+              <p class="result__info--text result__remark">&nbsp;</p>
+            </div>
+          </div>
+
+          <div class="result-cgpa">
+            <div>
+              <p class="result-cgpa__value">
+                Congratulations, your CGPA is
+                <span class="cgpa-value">&nbsp;</span> /
+                <span class="cgpa-standard">&nbsp;</span>
+              </p>
+              <p class="result-cgpa__compliment">
+                Ho! Hoo!! Hooray!!! You're on
+                <span class="cgpa-class">&nbsp;</span
+                ><span class="cgpa-advice"></span>
+              </p>
+            </div>
+          </div>
+
+          <div class="result-cgpa__footer">
+            <button class="btn result-cgpa__go-back-btn">
+              <span>&LongLeftArrow;</span> Back to form
+            </button>
+          </div>
+        </div>
+        <div class="main-slide__footer-2">
+          <button class="reset-btn">Reset</button>
+          <p class="main-slide__footer-2--author">
+            Designed and developed by
+            <a
+              href="http://tiskae.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Tiskae</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="7b6dbcd09039560f394068d445f6edcd">
+    <link rel="shortcut icon" href="d0c7ba375da8ebd0d2b9d61df6feaea2" type="image/x-icon">
+    <script defer="" src="aac459e8afeb3b6ad59a0027e3648798"></script>
+    <title>Fresh Project</title>
+  </head>
+  <body class="body-container">
+    <div class="slide slide--1 slide--active">
+      <div class="hero__container">
+        .hero
+      </div>
+    </div>
+    <div class="slide slide--2">Slide 2</div>
+    <div class="slide slide--3">Slide 3</div>
+  </body>
+</html>
